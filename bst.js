@@ -4,6 +4,7 @@ var bst = { firstDepth: 0 };
 
 // e.g. root:{ key:1, left:0, right:2 }
 bst.merge = function( inputs ) {
+	if( !this.validInputs(inputs) ) throw "bst.merge inputs are invalid: "+JSON.stringify(inputs);
 	this.root = { key:inputs[0] };
 	let deepest = { keys:[inputs[0]], depth:this.firstDepth }
 	for( let i = 1; i < inputs.length; i += 1 ) {
@@ -29,6 +30,13 @@ bst.insert = function( depth, node, num ) {
 	else {
 		return this.insert( depth+1, node[dir], num );
 	}
+}
+
+bst.validInputs = function( inputs ) {
+	for( let i = 0; i < inputs.length; i += 1 ) {
+		if( !(typeof inputs[i] == 'number' || typeof inputs[i] == 'string') ) return false;
+	}
+	return true;
 }
 
 bst.merge([12,11,90,82,7,9]);
