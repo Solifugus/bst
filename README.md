@@ -1,4 +1,4 @@
-# mtBST
+# BST
 
 This was just a little challenge project for a job interview (a binary search tree that reports on max depth, including one or more values at that depth.  The challenge did not specify language so I coded it first in two languages: (1) Node.js and (2) Go.  Furthermore, I write a shell script to run both sample tests on each version:
 
