@@ -1,5 +1,4 @@
 
-
 var bst = { firstDepth: 0 };
 
 // e.g. root:{ key:1, left:0, right:2 }
@@ -33,7 +32,6 @@ bst.insert = function( depth, node, num ) {
 	}
 }
 
-bst.merge([12,11,90,82,7,9]);
-bst.merge([26, 82, 16, 92, 33]);
-//console.log(JSON.stringify(bst.root,null,'  '));
+bst.merge( process.argv.slice(2) )
 
+//console.log(JSON.stringify(bst.root,null,'  '));
